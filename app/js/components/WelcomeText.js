@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class WelcomeText extends Component {
   getNames() {
@@ -20,3 +20,7 @@ export default class WelcomeText extends Component {
     );
   }
 }
+
+WelcomeText.propTypes = {
+  names: PropTypes.arrayOf(PropTypes.string).isRequired
+};
